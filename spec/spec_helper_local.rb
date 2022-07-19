@@ -1,3 +1,8 @@
+require 'yaml'
+
+TEST_MATRIX = YAML.load_file('./spec/matrix.yaml').fetch('test_matrix')
+
+conf_header = <<-EOT
 #
 # HEADER: This file is managed by Puppet
 # HEADER: Do not make modifications directly!
@@ -6,10 +11,5 @@
 #
 # /etc/login.defs - Configuration control definitions for the login package.
 #
-<%- options = scope.lookupvar('login_defs::merged_options') -%>
-<%- options.keys.sort_by { |sk| (sk.to_s.upcase) }.each do |k| -%>
-<%- v = options[k] -%>
-<%- if v != :undef and v != '' -%>
-<%= k %> <%= v %>
-<%- end -%>
-<%- end -%>
+EOT
+CONF_HEADER = conf_header

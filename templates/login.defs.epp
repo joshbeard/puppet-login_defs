@@ -1,0 +1,15 @@
+<%- | Hash $config_options | -%>
+#
+# HEADER: This file is managed by Puppet
+# HEADER: Do not make modifications directly!
+#
+###############################################################################
+#
+# /etc/login.defs - Configuration control definitions for the login package.
+#
+<%- $config_options.keys.sort.each |$key| { -%>
+<%- $value = $config_options[$key] -%>
+<%- if $value =~ Variant[String[1], Integer] { -%>
+<%= $key %> <%= $value %>
+<%- } -%>
+<%- } -%>

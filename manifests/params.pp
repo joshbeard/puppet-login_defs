@@ -42,6 +42,7 @@ class login_defs::params {
             'SYS_GID_MIN'      => '201',
             'SYS_UID_MAX'      => '999',
             'SYS_UID_MIN'      => '201',
+          }
          }
         '8': {
           $os_options = {

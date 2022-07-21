@@ -28,6 +28,21 @@ class login_defs::params {
       }
 
       case $::operatingsystemmajrelease {
+        '9': {
+          $os_options = {
+            'HMAC_CRYPTO_ALGO' => 'SHA512',
+            'HOME_MODE'        => '0700',
+            'SUB_GID_COUNT'    => '65536',
+            'SUB_GID_MAX'      => '600100000',
+            'SUB_GID_MIN'      => '100000',
+            'SUB_UID_COUNT'    => '65536',
+            'SUB_UID_MAX'      => '600100000',
+            'SUB_UID_MIN'      => '100000',
+            'SYS_GID_MAX'      => '999',
+            'SYS_GID_MIN'      => '201',
+            'SYS_UID_MAX'      => '999',
+            'SYS_UID_MIN'      => '201',
+         }
         '8': {
           $os_options = {
             'HOME_MODE'       => '0700',

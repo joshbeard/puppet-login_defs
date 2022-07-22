@@ -1,0 +1,8 @@
+login_defs::mode: '0644'
+login_defs::owner: 'root'
+login_defs::group: '0'
+
+login_defs::options: {}
+
+login_defs::common_options: {}
+login_defs::default_options: {}

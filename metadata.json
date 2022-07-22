@@ -8,7 +8,10 @@
   "project_page": "https://github.com/joshbeard/puppet-login_defs",
   "issues_url": "https://github.com/joshbeard/puppet-login_defs/issues",
   "dependencies": [
-    {"name":"puppetlabs/stdlib","version_requirement":">= 2.4.0 < 9.0.0"}
+    {
+      "name": "puppetlabs/stdlib",
+      "version_requirement": ">= 2.4.0 < 9.0.0"
+    }
   ],
   "operatingsystem_support": [
     {
@@ -17,8 +20,7 @@
         "5",
         "6",
         "7",
-        "8",
-        "9"
+        "8"
       ]
     },
     {
@@ -26,14 +28,16 @@
       "operatingsystemrelease": [
         "5",
         "6",
-        "7"
+        "7",
+        "8"
       ]
     },
     {
       "operatingsystem": "OracleLinux",
       "operatingsystemrelease": [
         "6",
-        "7"
+        "7",
+        "8"
       ]
     },
     {
@@ -56,7 +60,13 @@
       "operatingsystemrelease": [
         "10.04",
         "12.04",
-        "14.04"
+        "14.04",
+        "18.04",
+        "20.04",
+        "20.10",
+        "21.04",
+        "21.10",
+        "22.04"
       ]
     },
     {
@@ -69,5 +79,14 @@
         "12 SP2"
       ]
     }
-  ]
+  ],
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">= 4.10.0 < 7.0.0"
+    }
+  ],
+  "pdk-version": "1.14.0",
+  "template-url": "pdk-default#1.14.0",
+  "template-ref": "1.14.0-0-g1bf3a4e"
 }

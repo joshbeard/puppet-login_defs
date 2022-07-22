@@ -1,0 +1,10 @@
+# Specific options for RedHat 8 systems
+# NOTE: These are merged with the 'login_defs::common_options' specified in 'RedHat.yaml'
+---
+login_defs::default_options:
+  HOME_MODE: '0700'
+  UMASK: '022'
+  SYS_GID_MAX: '999'
+  SYS_GID_MIN: '201'
+  SYS_UID_MAX: '999'
+  SYS_UID_MIN: '201'

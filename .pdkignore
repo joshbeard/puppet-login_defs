@@ -1,10 +1,12 @@
 .git/
+.github/
 .*.sw[op]
 .metadata
 .yardoc
 .yardwarns
 *.iml
 /.bundle/
+/.bundler/
 /.idea/
 /.vagrant/
 /coverage/

@@ -13,6 +13,9 @@ Backwards-incompatible release that updates the code for modern language convent
   * Replace ERB template with EPP template
   * Use Hiera data in module for defaults
 
+* Removes EL5 and EL6 from supported platforms. The default configs are still in the module - this just removes those versions
+  from metadata.
+* Removes ancient Ubuntu releases, adds current releases.
 * Added RedHat 8 defaults [@bschonec](https://github.com/bschonec) [PR #6](https://github.com/joshbeard/puppet-login_defs/pull/6)
 * Metadata syntax fix [@sdwatwork](https://github.com/sdwatwork) [PR #10](https://github.com/joshbeard/puppet-login_defs/pull/10)
 * Added RedHat 9 defaults [@bschonec](https://github.com/bschonec) [PR #11](https://github.com/joshbeard/puppet-login_defs/pull/11)

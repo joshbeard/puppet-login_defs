@@ -1,9 +1,9 @@
 {
   "name": "joshbeard-login_defs",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "Josh Beard",
   "summary": "Manages /etc/login.defs",
-  "license": "Apache-2.0",
+  "license": "0BSD",
   "source": "https://github.com/joshbeard/puppet-login_defs.git",
   "project_page": "https://github.com/joshbeard/puppet-login_defs",
   "issues_url": "https://github.com/joshbeard/puppet-login_defs/issues",
@@ -17,8 +17,6 @@
     {
       "operatingsystem": "RedHat",
       "operatingsystemrelease": [
-        "5",
-        "6",
         "7",
         "8"
       ]
@@ -26,8 +24,6 @@
     {
       "operatingsystem": "CentOS",
       "operatingsystemrelease": [
-        "5",
-        "6",
         "7",
         "8"
       ]
@@ -35,7 +31,6 @@
     {
       "operatingsystem": "OracleLinux",
       "operatingsystemrelease": [
-        "6",
         "7",
         "8"
       ]
@@ -43,24 +38,22 @@
     {
       "operatingsystem": "Scientific",
       "operatingsystemrelease": [
-        "5",
-        "6",
-        "7"
+        "7",
+        "8"
       ]
     },
     {
       "operatingsystem": "Debian",
       "operatingsystemrelease": [
-        "6",
-        "7"
+        "9",
+        "10",
+        "11"
       ]
     },
     {
       "operatingsystem": "Ubuntu",
       "operatingsystemrelease": [
-        "10.04",
-        "12.04",
-        "14.04",
+        "16.04",
         "18.04",
         "20.04",
         "20.10",
@@ -74,16 +67,12 @@
     },
     {
       "operatingsystem": "SLES",
-      "operatingsystemrelease": [
-        "11 SP4",
-        "12 SP2"
-      ]
     }
   ],
   "requirements": [
     {
       "name": "puppet",
-      "version_requirement": ">= 4.10.0 < 7.0.0"
+      "version_requirement": ">= 4.10.0 < 8.0.0"
     }
   ],
   "pdk-version": "1.14.0",

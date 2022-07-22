@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## Release 1.0.0
 
+2022-07-21
+
 Backwards-incompatible release that updates the code for modern language conventions.
 
 * Update for Puppet 4.x+ language conventions, including:
@@ -17,12 +19,6 @@ Backwards-incompatible release that updates the code for modern language convent
 
 * Modernized module with `pdk convert`
 * Fixed, updated and added unit tests
-
-**Features**
-
-**Bugfixes**
-
-**Known Issues**
 
 ## Release 0.2.0
 

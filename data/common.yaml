@@ -1,8 +1,20 @@
+# Common defaults
+---
 login_defs::mode: '0644'
 login_defs::owner: 'root'
 login_defs::group: '0'
 
+# options should be a Hash of options to add to login.defs.
+# Example:
+#   login_defs::options:
+#     UMASK: '022'
 login_defs::options: {}
 
+# The following are used internally but may be overridden if desired, though
+# that shouldn't be necessary.
+# 'common_options' can be used for merging defaults for an OS family with more
+# specific 'default_options'.
 login_defs::common_options: {}
+# 'default_options' should specify the default options in /etc/login.defs for a
+# distribution.
 login_defs::default_options: {}

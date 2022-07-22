@@ -1,4 +1,4 @@
-name: Validation and Linting
+name: Validation
 
 on:
   - push

@@ -1,3 +1,6 @@
+# Specific options for RedHat 7 systems
+# NOTE: These are merged with the 'login_defs::common_options' specified in 'RedHat.yaml'
+---
 login_defs::default_options:
   SYS_GID_MAX: '999'
   SYS_GID_MIN: '201'

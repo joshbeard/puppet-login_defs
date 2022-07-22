@@ -1,7 +1,7 @@
 # NOTE: 'common_options' gets merged with 'default_options', specified in the
 # version-specific data.
 ---
-login_defs::common_options:
+login_defs::default_options: 
   CREATE_HOME: 'yes'
   ENCRYPT_METHOD: 'SHA512'
   GID_MAX: '60000'

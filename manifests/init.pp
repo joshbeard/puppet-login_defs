@@ -32,11 +32,9 @@ class login_defs (
   String                                           $group           = '0',
   Optional[Hash[String, Variant[String, Integer]]] $options         = {},
   Hash[String, Variant[String, Integer]]           $default_options = {},
-  Optional[Hash[String, Variant[String, Integer]]] $common_options  = {},
 ) {
 
-  $_merged_options = merge($common_options, $default_options)
-  $_config_options = merge($_merged_options, $options)
+  $_config_options = merge($default_options, $options)
 
   file { '/etc/login.defs':
     ensure  => 'file',

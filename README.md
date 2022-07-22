@@ -1,7 +1,7 @@
 # login_defs module for Puppet
 
 ![Validation Status](https://github.com/joshbeard/puppet-login_defs/actions/workflows/validate.yml/badge.svg)
-[![Puppet Forge](https://img.shields.io/puppetforge/v/joshbeard/login_defs.svg)](https://forge.puppetlabs.com/puppet/logrotate)
+[![Puppet Forge](https://img.shields.io/puppetforge/v/joshbeard/login_defs.svg)](https://forge.puppetlabs.com/joshbeard/login_defs)
 [![License](https://img.shields.io/github/license/joshbeard/puppet-login_defs.svg)](https://github.com/joshbeard/puppet-login_defs/blob/master/LICENSE)
 
 Manages `/etc/login.defs` on Linux systems.

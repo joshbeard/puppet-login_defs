@@ -1,0 +1,17 @@
+# Specific options for RedHat 8 systems
+# NOTE: These are merged with the 'login_defs::common_options' specified in 'RedHat.yaml'
+---
+login_defs::default_options:
+  HMAC_CRYPTO_ALGO: 'SHA512'
+  HOME_MODE: '0700'
+  SUB_GID_COUNT: '65536'
+  SUB_GID_MAX: '600100000'
+  SUB_GID_MIN: '100000'
+  SUB_UID_COUNT: '65536'
+  SUB_UID_MAX: '600100000'
+  SUB_UID_MIN: '100000'
+  SYS_GID_MAX: '999'
+  SYS_GID_MIN: '201'
+  SYS_UID_MAX: '999'
+  SYS_UID_MIN: '201'
+  UMASK: '022'

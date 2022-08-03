@@ -1,6 +1,8 @@
 # login_defs module for Puppet
 
 ![Validation Status](https://github.com/joshbeard/puppet-login_defs/actions/workflows/validate.yml/badge.svg)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/b791bcb3054c464babda1614868639d4)](https://www.codacy.com/gh/joshbeard/puppet-login_defs/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=joshbeard/puppet-login_defs&amp;utm_campaign=Badge_Grade)
+[![CodeFactor](https://www.codefactor.io/repository/github/joshbeard/puppet-login_defs/badge)](https://www.codefactor.io/repository/github/joshbeard/puppet-login_defs)
 [![Puppet Forge](https://img.shields.io/puppetforge/v/joshbeard/login_defs.svg)](https://forge.puppetlabs.com/joshbeard/login_defs)
 [![License](https://img.shields.io/github/license/joshbeard/puppet-login_defs.svg)](https://github.com/joshbeard/puppet-login_defs/blob/master/LICENSE)
 

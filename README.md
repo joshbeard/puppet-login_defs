@@ -52,12 +52,15 @@ A _hash_ of options to populate the `login.defs` file with.
 Reference the `login.defs(5)` man page for a list of configuration items and
 their description.  [http://linux.die.net/man/5/login.defs](http://linux.die.net/man/5/login.defs)
 
-* Any option you add here will be *merged* with the default options.
+* Any option you add here will be _merged_ with the default options.
+
 * You can override a default value here as well by using a key with the same
   name.
+
 * You can remove a default option by specifying `undef` or an empty string for
   its value.
-* Your options will *not* be validated for correctness.
+
+* Your options will _not_ be validated for correctness.
 
 ### Example Usage
 
@@ -94,31 +97,38 @@ class { '::login_defs':
 ## Contributing
 
 1. Fork and clone the repository.
+
 2. Branch off of `master`.
+
 3. Open a merge request into `master` and check the validation results (GitHub Actions).
 
 To add a distribution's default options:
 
 1. Create a file under `data/` named as:
 
-    ```yaml
-    - "%{facts.os.family}-%{facts.os.release.major}.yaml"
-    - "%{facts.os.family}.yaml"
-    - "%{facts.os.name}.yaml"
-    ```
+   ```yaml
+   - "%{facts.os.family}-%{facts.os.release.major}.yaml"
+   - "%{facts.os.family}.yaml"
+   - "%{facts.os.name}.yaml"
+   ```
 
-    Be specific if the options are unique to a particular release. Refer to the [RedHat defaults](data/) for an example of setting common defaults in `RedHat.yaml` and overriding or adding parameters in `RedHat-*.yml`.
+   Be specific if the options are unique to a particular release. Refer to the
+   [RedHat defaults](data/) for an example of setting common defaults in
+   `RedHat.yaml` and overriding or adding parameters in `RedHat-*.yml`.
 
 2. Refer to the existing configs for an example of the structure.
-3. Set _all_ of the default options for the distribution from `/etc/login.defs` without any customizations.
+
+3. Set _all_ of the default options for the distribution from `/etc/login.defs`
+   without any customizations.
+
 4. Define a test (optional)
 
-    Add the test to the [`spec/matrix.yaml`](spec/matrix.yaml) file,
-    specifying the value of the options to check. This may be duplicated from
-    the Hiera data, but it's _flat_.
+   Add the test to the [`spec/matrix.yaml`](spec/matrix.yaml) file,
+   specifying the value of the options to check. This may be duplicated from
+   the Hiera data, but it's _flat_.
 
-    A test isn't required for contributions, but it's helpful. If one isn't
-    provided in a contribution, it will be added by the maintainer.
+   A test isn't required for contributions, but it's helpful. If one isn't
+   provided in a contribution, it will be added by the maintainer.
 
 ## Contributors
 

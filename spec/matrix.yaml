@@ -1,29 +1,6 @@
 # This is my hacky way of providing a test matrix with different options.
 ---
 test_matrix:
-  redhat_6:
-    facts:
-      os:
-        family: RedHat
-        distro:
-          release:
-            major: '6'
-        release:
-          major: '6'
-    options:
-      GID_MIN: '500'
-      UID_MIN: '500'
-      CREATE_HOME: 'yes'
-      ENCRYPT_METHOD: 'SHA512'
-      GID_MAX: '60000'
-      MAIL_DIR: '/var/spool/mail'
-      PASS_MAX_DAYS: '99999'
-      PASS_MIN_DAYS: '0'
-      PASS_MIN_LEN: '5'
-      PASS_WARN_AGE: '7'
-      UID_MAX: '60000'
-      UMASK: '077'
-      USERGROUPS_ENAB: 'yes'
 
   redhat_7:
     facts:
@@ -62,6 +39,35 @@ test_matrix:
             major: '8'
         release:
           major: '8'
+    options:
+      HOME_MODE: '0700'
+      UMASK: '022'
+      SYS_GID_MAX: '999'
+      SYS_GID_MIN: '201'
+      SYS_UID_MAX: '999'
+      SYS_UID_MIN: '201'
+      CREATE_HOME: 'yes'
+      ENCRYPT_METHOD: 'SHA512'
+      GID_MAX: '60000'
+      GID_MIN: '1000'
+      MAIL_DIR: '/var/spool/mail'
+      PASS_MAX_DAYS: '99999'
+      PASS_MIN_DAYS: '0'
+      PASS_MIN_LEN: '5'
+      PASS_WARN_AGE: '7'
+      UID_MAX: '60000'
+      UID_MIN: '1000'
+      USERGROUPS_ENAB: 'yes'
+
+  redhat_9:
+    facts:
+      os:
+        family: RedHat
+        distro:
+          release:
+            major: '9'
+        release:
+          major: '9'
     options:
       HOME_MODE: '0700'
       UMASK: '022'

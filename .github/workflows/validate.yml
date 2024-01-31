@@ -1,8 +1,10 @@
 name: Validation
 
 on:
-  - push
-  - pull_request
+  push:
+    branches:
+      - master
+  pull_request:
 
 jobs:
   pdk-validate:
@@ -14,38 +16,10 @@ jobs:
     - name: Run pdk validate
       uses: addnab/docker-run-action@v3
       with:
-        image: puppet/puppet-dev-tools
+        image: puppet/pdk
         options: -v ${{ github.workspace }}:/module -w /module
         run: |
           pdk validate --parallel
-
-  puppet-parser-validate:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Clone repository
-      uses: actions/checkout@v4
-
-    - name: Run puppet parser validate
-      uses: addnab/docker-run-action@v3
-      with:
-        image: puppet/puppet-dev-tools
-        options: -v ${{ github.workspace }}:/module -w /module
-        run: |
-          puppet parser validate manifests/*.pp
-
-  puppet-lint:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Clone repository
-      uses: actions/checkout@v4
-
-    - name: Run puppet-lint
-      uses: addnab/docker-run-action@v3
-      with:
-        image: puppet/puppet-dev-tools
-        options: -v ${{ github.workspace }}:/module -w /module
-        run: |
-          puppet-lint manifests/*.pp
 
   unit-tests:
     runs-on: ubuntu-latest
@@ -56,7 +30,7 @@ jobs:
     - name: Run pdk test unit
       uses: addnab/docker-run-action@v3
       with:
-        image: puppet/puppet-dev-tools
+        image: puppet/pdk
         options: -v ${{ github.workspace }}:/module -w /module
         run: |
           pdk test unit

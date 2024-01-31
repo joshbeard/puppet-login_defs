@@ -12,7 +12,7 @@ Manages `/etc/login.defs` on Linux systems.
 
 ### What this module affects
 
-* Manages the contents, owner, group, and mode of `/etc/login.defs`
+Manages the contents, owner, group, and mode of `/etc/login.defs`
 
 ### Beginning with this module
 

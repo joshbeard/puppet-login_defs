@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
+## Release 1.2.0
+
+2024-01-31
+
+* Add EL9 support, update tests/linting. @treydock PR #34)
+* PDK updates, housekeeping, CI maintenance
+
+[Compare 1.1.1...1.2.0](https://github.com/joshbeard/puppet-login_defs/compare/1.1.1...1.2.0)
+
 ## Release 1.1.1
 
 2022-07-21

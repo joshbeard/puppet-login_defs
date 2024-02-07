@@ -10,11 +10,14 @@ login_defs::group: '0'
 #     UMASK: '022'
 login_defs::options: {}
 
+# 'default_options' should specify the default options in /etc/login.defs for a
+# distribution.
+login_defs::default_options: {}
+
+# DEPRECATED: Use `default_options` for common defaults and `options` to
+# override.
 # The following are used internally but may be overridden if desired, though
 # that shouldn't be necessary.
 # 'common_options' can be used for merging defaults for an OS family with more
 # specific 'default_options'.
 login_defs::common_options: {}
-# 'default_options' should specify the default options in /etc/login.defs for a
-# distribution.
-login_defs::default_options: {}

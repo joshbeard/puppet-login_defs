@@ -33,4 +33,4 @@ jobs:
         image: puppet/pdk
         options: -v ${{ github.workspace }}:/module -w /module
         run: |
-          pdk test unit
+          pdk test unit -v

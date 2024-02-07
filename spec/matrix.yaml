@@ -1,4 +1,3 @@
-# This is my hacky way of providing a test matrix with different options.
 ---
 test_matrix:
 

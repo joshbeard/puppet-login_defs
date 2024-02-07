@@ -19,12 +19,12 @@
 #   module. The options specified will take precedence.
 #
 # @param default_options
-#   Internally used to list default options for a platform.
+#   Default options for a platform.
 #   These values will be merged with the 'options' specified by the user.
 #
 # @param common_options
-#   Internally used for setting common options for OS families (RedHat). It is
-#   merged with 'default_options' and 'options'.
+#   Deprecated parameter. Internally used for setting common options for OS
+#   families (RedHat). It is merged with 'default_options' and 'options'.
 #
 class login_defs (
   Pattern[/^\d{3,4}$/]                             $mode            = '0644',
@@ -36,6 +36,14 @@ class login_defs (
 ) {
   $_merged_options = merge($common_options, $default_options)
   $_config_options = merge($_merged_options, $options)
+
+  # common_options is deprecated.
+  if $common_options != {} {
+    notify { 'common_options_deprecated':
+      message  => 'The `common_options` parameter is deprecated and will be removed in a future release. Please use `default_options` instead.',
+      loglevel => 'warning',
+    }
+  }
 
   file { '/etc/login.defs':
     ensure  => 'file',

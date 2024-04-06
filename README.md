@@ -136,8 +136,4 @@ To add a distribution's default options:
 
 Maintained by [Josh Beard](https://joshbeard.me)
 
-<a href="https://github.com/joshbeard/puppet-login_defs/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=joshbeard/puppet-login_defs" />
-</a>
-
-_Made with [contributors-img](https://contrib.rocks)._
+See the list of [contributors](https://github.com/joshbeard/puppet-login_defs/graphs/contributors).

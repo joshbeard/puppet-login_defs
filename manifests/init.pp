@@ -40,7 +40,10 @@ class login_defs (
   # common_options is deprecated.
   if $common_options != {} {
     notify { 'common_options_deprecated':
-      message  => 'The `common_options` parameter is deprecated and will be removed in a future release. Please use `default_options` instead.',
+      message  => join([
+          'The `common_options` parameter is deprecated and will be removed in',
+          'a future release. Please use `default_options` instead.',
+      ], ' '),
       loglevel => 'warning',
     }
   }

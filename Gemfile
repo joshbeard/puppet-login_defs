@@ -33,7 +33,7 @@ group :development do
   gem "puppet-debugger", '~> 1.0',               require: false
   gem "rubocop", '1.65.0',                     require: false
   gem "rubocop-performance", '1.21.1',         require: false
-  gem "rubocop-rspec", '2.29.1',               require: false
+  gem "rubocop-rspec", '3.0.3',               require: false
   gem "puppet-strings", '~> 4.0',                require: false
   gem "rb-readline", '= 0.5.5',                  require: false, platforms: [:mswin, :mingw, :x64_mingw]
 end

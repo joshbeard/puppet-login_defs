@@ -31,7 +31,7 @@ group :development do
   gem "pry", '~> 0.10',                          require: false
   gem "simplecov-console", '~> 0.5',             require: false
   gem "puppet-debugger", '~> 1.0',               require: false
-  gem "rubocop", '1.65.0',                     require: false
+  gem "rubocop", '1.66.0',                     require: false
   gem "rubocop-performance", '1.21.1',         require: false
   gem "rubocop-rspec", '2.29.1',               require: false
   gem "puppet-strings", '~> 4.0',                require: false

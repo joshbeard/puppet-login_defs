@@ -34,8 +34,12 @@ class login_defs (
   Hash[String, Variant[String, Integer]]           $default_options = {},
   Hash[String, Variant[String, Integer]]           $common_options  = {},
 ) {
-  $_merged_options = merge($common_options, $default_options)
-  $_config_options = merge($_merged_options, $options)
+  $mergefunc = versioncmp(load_module_metadata('stdlib')['version'], '9.0.0') ? {
+    -1      => 'merge',
+    default => 'stdlib::merge',
+  }
+  $_merged_options = call($mergefunc, $common_options, $default_options)
+  $_config_options = call($mergefunc, $_merged_options, $options)
 
   # common_options is deprecated.
   if $common_options != {} {
